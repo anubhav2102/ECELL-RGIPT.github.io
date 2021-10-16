@@ -1,0 +1,47 @@
+body, html, ul, li, img, div{
+    margin:0; padding:0;
+  }
+  body{
+    width:80%;
+    margin: 50px auto;
+  }
+  .auto-slider img{
+    display:block;
+  }
+  .auto-slider{
+    outline:1px solid red;
+    width:720px;
+    height:360px;
+    
+    overflow-x:hidden;
+  }
+  
+  .auto-slider__content{
+    list-style:none;
+    display:flex;
+    animation: slide 10s ease-in-out infinite;
+  }
+  .auto-slider__content:hover{
+    animation-play-state:paused;    
+  }
+  
+  @keyframes slide{
+    10%{
+      transform:translateX(0);
+    }
+    15%, 30%{
+      transform:translateX(-720px);
+    }
+    35%, 50%{
+      transform:translateX(-1440px);
+    }
+    55%, 70%{
+      transform:translateX(-2160px);
+    }
+    75%, 90%{
+      transform:translateX(0);
+    }
+    
+  }
+  
+  
